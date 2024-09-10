@@ -44,10 +44,10 @@ public class EmployeeRestController {
         return emp;
     }
 
-    @DeleteMapping("/employees/{employeeId}")
+    @DeleteMapping("/employees/{id}")
     public String deleteEmployee(@PathVariable int id){
         Employee employee = employeeService.findById(id);
-        if (employee==null) return "No employee with such id: " + id;
+        if (employee==null) return "No such employee with id: " + id;
         employeeService.deleteById(id);
         return "Deleted employee with id: " + id;
     }
