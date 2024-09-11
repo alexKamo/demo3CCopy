@@ -26,7 +26,7 @@ public class EmployeeServiceImp implements EmployeeService {
 
     @Override
     public Employee findById(int id) {
-        return employeeDAO.findById(1);
+        return employeeDAO.findById(id);
     }
 
     @Transactional
